@@ -4,7 +4,7 @@ import firebase from "./firebase_config";
 import { auth } from "./firebase_config";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 export const Signup = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
@@ -28,11 +28,10 @@ export const Signup = () => {
     e.preventDefault();
     const { email, password } = formData;
     try {
-      await firebase.auth().createUserWithEmailAndPassword(email, password);
-      // Optionally, you can update user profile here with additional information like name, surname, id
-      await firebase.auth().currentUser.updateProfile({
-        displayName: formData.name + " " + formData.surname,
-      });
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await updateProfile(userCredential.user, {
+        displayName: formData.name + " " + formData.surname,})
+
       console.log("User signed up successfully!");
       navigate("/Home"); // Redirect user to Home.js pages
     } catch (error) {
