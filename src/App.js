@@ -13,6 +13,7 @@ import { Signinbody } from "./Signinbody";
 import Home from "./Home";
 import Layout from "./Layout";
 import Navbarafter from "./Navbarafter";
+import OrgEvents from "./comps/OrgEvents";
 function App() {
   return (
     <BrowserRouter>
@@ -27,7 +28,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Signinbody />} />
           <Route path="/Signup" element={<Signup />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<OrgEvents />} />
+          <Route path="/home/home" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>
