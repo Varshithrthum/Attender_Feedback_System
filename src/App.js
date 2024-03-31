@@ -32,7 +32,7 @@ function App() {
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/home" element={<Home />} />
           <Route path="/home/home" element={<Home />} />
-          <Route path ="/nominations" element={<ListNominationComponent />} />
+          <Route path ="/nominate" element={<ListNominationComponent />} />
         </Routes>
       </div>
     </BrowserRouter>
