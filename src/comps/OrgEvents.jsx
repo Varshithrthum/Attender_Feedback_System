@@ -80,7 +80,7 @@ const OrgEvents = () => {
         return (
             <div className="event" key={id}>
                 <div className="text-container1">
-                    <h2 className="text_11">Artificial Intelligence Workshop</h2>
+                    <h2 className="text_11">{eventName}</h2>
                     <p className="text_21">Date: {eventDate}</p>
                     <p className="text_21">Attendees: {eventAttendee} students</p>
                 </div>
@@ -216,7 +216,7 @@ const OrgEvents = () => {
 
     useEffect(() => {
         (async function() {
-            console.log(userId.uid)
+            //console.log(userId.uid)
             try {
                 setEvents([])
                 const collection_ref =collection(db, 'Events', )
@@ -271,6 +271,7 @@ const OrgEvents = () => {
     }
 
     return (
+
         <>
             <Displayname />
             <GenerateEvents />
