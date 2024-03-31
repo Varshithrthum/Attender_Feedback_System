@@ -41,72 +41,72 @@ export const Signup = () => {
   };
 
   return (
-    <div className="container1">
-      <div className="image-container1">
+    <div className="container2">
+      <div className="image-container2">
         <img
           src="https://cdn.glitch.global/07931069-62a9-4bd9-a047-47fd7905975d/scott-graham-5fNmWej4tAA-unsplash.jpg?v=1708541537104"
           alt="signup"
         />
-        <div className="white-box1">
-          <p className="text_1">SIGN UP</p>
+        <div className="white-box2">
+          <p className="text_12">SIGN UP</p>
           <form onSubmit={handleSubmit} name="form">
-            <div className="form-container1">
+            <div className="form-container2">
               <input
                 type="text"
                 placeholder="Name"
-                className="text_21"
+                className="text_22"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-container">
+            <div className="form-container2">
               <input
                 type="text"
                 placeholder="Family name"
-                className="text_21"
+                className="text_22"
                 name="surname"
                 value={formData.surname}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-container">
+            <div className="form-container2">
               <input
                 type="text"
                 placeholder="ID"
-                className="text_21"
+                className="text_22"
                 name="id"
                 value={formData.id}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-container">
+            <div className="form-container2">
               <input
                 type="email"
                 placeholder="Email"
-                className="text_21"
+                className="text_22"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="form-container">
+            <div className="form-container2">
               <input
                 type="password"
                 placeholder="Password"
-                className="text_21"
+                className="text_22"
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
                 required
               />
             </div>
-            <div className="button-container">
-              <input type="submit" value="Sign Up" className="button" />
+            <div className="button-container2">
+              <input type="submit" value="Sign Up" className="button2" />
             </div>
           </form>
         </div>
