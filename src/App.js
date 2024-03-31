@@ -37,13 +37,14 @@ function App() {
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/*" element={<Home />} />
           <Route path="/nominate" element={<ListNominationComponent />} />
-          
           <Route path="/report" element={<Report />} />
           <Route path="/chart" element={<ChartComponent />} />
           <Route path="/Questionaire" element={<Questioning />} />
           <Route path="/feedbackform" element={<FeedbackForm />} />
           <Route path="/landingpage" element={<Landing />} /> 
           <Route path="/addquest" element={<Question />} />
+          <Route path="/home/home" element={<Home />} />
+          <Route path="/home/home" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>
