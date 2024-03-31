@@ -1,25 +1,25 @@
-.container1 {
+.container2 {
   width: 100%;
   height: 100%;
   position: absolute;
   overflow: hidden;
 }
 
-.image-container1 {
+.image-container2 {
   position: relative;
   height: 100%;
   width: 100%;
   inset: 0;
 }
 
-.image-container1 > img {
+.image-container2 > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.white-box1 {
+.white-box2 {
   position: absolute;
   z-index: 2;
   border: none;
@@ -30,13 +30,13 @@
   background-color: white;
 }
 
-.text_11 {
+.text_12 {
   text-align: center;
   font-family: Raleway, sans-serif;
   font-size: 50px;
 }
 
-.text_21 {
+.text_22 {
   font-family: Raleway, sans-serif;
   font-size: 20px;
   color: rgba(0,0,0,0.5);
@@ -46,7 +46,7 @@
   border:none!important;
 }
 
-.form-container1 {
+.form-container2 {
   height: 30px;
   width: 87.5%;
   margin-left: 30px;
@@ -55,12 +55,12 @@
   margin-bottom: 30px;
 }
 
-.button-container1 {
+.button-container2 {
   text-align: center;
   height: 100px;
 }
 
-.button1 {
+.button2 {
   background-color: #073763;
   display: inline-block;
   width: 90%;
@@ -73,14 +73,14 @@
   border-radius: 10px; 
 }
 
-.text_21:hover,
-.text_21:focus  {
+.text_22:hover,
+.text_22:focus  {
   border:none!important;
 }
 
 @media(max-width:520px) {
 
-.white-container1 {
+.white-container2 {
   position: absolute;
   z-index: 2;
   border: none;
@@ -91,13 +91,13 @@
   background-color: white;
 }
 
-.text_11 {
+.text_12 {
   text-align: center;
   font-family: Raleway, sans-serif;
   font-size: 40px;
 }
 
-.text_21 {
+.text_22 {
   font-family: Raleway, sans-serif;
   font-size: 15px;
   color: rgba(0,0,0,0.5);
