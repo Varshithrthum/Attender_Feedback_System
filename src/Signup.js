@@ -41,20 +41,20 @@ export const Signup = () => {
   };
 
   return (
-    <div className="container">
-      <div className="image-container">
+    <div className="container1">
+      <div className="image-container1">
         <img
           src="https://cdn.glitch.global/07931069-62a9-4bd9-a047-47fd7905975d/scott-graham-5fNmWej4tAA-unsplash.jpg?v=1708541537104"
           alt="signup"
         />
-        <div className="white-box">
+        <div className="white-box1">
           <p className="text_1">SIGN UP</p>
           <form onSubmit={handleSubmit} name="form">
-            <div className="form-container">
+            <div className="form-container1">
               <input
                 type="text"
                 placeholder="Name"
-                className="text_2"
+                className="text_21"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -65,7 +65,7 @@ export const Signup = () => {
               <input
                 type="text"
                 placeholder="Family name"
-                className="text_2"
+                className="text_21"
                 name="surname"
                 value={formData.surname}
                 onChange={handleChange}
@@ -76,7 +76,7 @@ export const Signup = () => {
               <input
                 type="text"
                 placeholder="ID"
-                className="text_2"
+                className="text_21"
                 name="id"
                 value={formData.id}
                 onChange={handleChange}
@@ -87,7 +87,7 @@ export const Signup = () => {
               <input
                 type="email"
                 placeholder="Email"
-                className="text_2"
+                className="text_21"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -98,7 +98,7 @@ export const Signup = () => {
               <input
                 type="password"
                 placeholder="Password"
-                className="text_2"
+                className="text_21"
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
