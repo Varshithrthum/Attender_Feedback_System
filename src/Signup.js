@@ -27,13 +27,39 @@ export const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = formData;
+
+    // Regular expressions for email and password validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    // Checking email format
+    if (!emailRegex.test(email)) {
+      alert("Invalid email format");
+      // Handle error: Display error message to user
+      return;
+    }
+
+    // Checking password format
+    if (!passwordRegex.test(password)) {
+      alert(
+        "Password should contain at least 6 characters with at least one uppercase and one lowercase letter"
+      );
+      // Handle error: Display error message to user
+      return;
+    }
+
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       await updateProfile(userCredential.user, {
-        displayName: formData.name + " " + formData.surname,})
+        displayName: formData.name + " " + formData.surname,
+      });
 
       console.log("User signed up successfully!");
-      navigate("/Home"); // Redirect user to Home.js pages
+      navigate("/Home"); // Redirect user to Home.js page
     } catch (error) {
       console.error("Error signing up:", error.message);
       // Handle error: Display error message to user
