@@ -1,6 +1,19 @@
 import React from "react";
+import {useState } from "react";
+import { auth } from "./firebase_config";
+import {getUserData} from "./comps/globalFunctions";
 
 const Navbarafter = () => {
+  async function handleLogout() {
+    await auth.signOut();
+    localStorage.removeItem('user')
+    localStorage.removeItem('token')
+    console.log("Signout Successful!");
+    window.location.replace("/");
+
+  }
+
+
   return (
     <div>
       <nav className="navbar">
@@ -19,7 +32,7 @@ const Navbarafter = () => {
               <a className="nav-link">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Log Out</a>
+              <a className="nav-link" onClick={()=>handleLogout()}>Log Out</a>
             </li>
           </ul>
         </div>

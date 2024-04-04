@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from "react";
-import {db} from "../firebase_config";
+import {db, auth } from "../firebase_config";
 import { getUserData } from "./globalFunctions";
-import {collection, getDocs, query, doc, addDoc, setDoc, deleteDoc, orderBy, where} from "firebase/firestore";
+import {collection, getDocs, query, doc, addDoc, setDoc, deleteDoc, where} from "firebase/firestore";
 import {useNavigate} from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -13,11 +13,18 @@ import Displayname from "../Displayname";
 
 const OrgEvents = () => {
     const userId = getUserData("user")
+
+    if (!userId || !auth) {
+        window.location.replace("/");
+    } else {
+        console.log(userId)
+    }
+
+    const navigate = useNavigate()
     const [eventRefresh, setEventRefresh] = useState(0);
     const [myevents, setEvents] = useState([]);
     const [ismyAddOverlay, setIsMyAddOverlay] = useState(false)
     const [ismyUpdateOverlay, setismyUpdateOverlay] = useState(false)
-    const navigate = useNavigate()
     const [thisDocId, setthisDocId ] = useState('')
     const [thisEventName, setthisEventName ] = useState('')
     const [thisEventDate, setthisEventDate ] = useState(new Date())
