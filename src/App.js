@@ -15,6 +15,7 @@ import Layout from "./Layout";
 import Navbarafter from "./Navbarafter";
 import OrgEvents from "./comps/OrgEvents";
 import ListNominationComponent from './comps/listNominations';
+import Nominations from './comps/Nominations'
 function App() {
   return (
     <BrowserRouter>
@@ -32,7 +33,7 @@ function App() {
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/home" element={<Home />} />
           <Route path="/home/home" element={<Home />} />
-          <Route path ="/nominate" element={<ListNominationComponent />} />
+          <Route path ="/nominate"  element={<Nominations />} /> 
         </Routes>
       </div>
     </BrowserRouter>
