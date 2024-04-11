@@ -1,9 +1,23 @@
 import React from "react";
+import {useState } from "react";
+import { auth } from "./firebase_config";
+import {getUserData} from "./comps/globalFunctions";
 import { Link } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
 import "./Navbarbefore.css";
 
+
 const Navbarafter = () => {
+  async function handleLogout() {
+    await auth.signOut();
+    localStorage.removeItem('user')
+    localStorage.removeItem('token')
+    console.log("Signout Successful!");
+    window.location.replace("/");
+
+  }
+
+
   return (
     <div>
       <nav className="navbar">
@@ -22,11 +36,11 @@ const Navbarafter = () => {
           <input type="checkbox" id="check"/>
            <div className="side-bar" id="side-bar">
            <ul className="nav_1">
-            <li className="nav-item">
-              <a className="nav-link">Home</a>
+            <li className="nav-item1">
+              <a className="nav-link1">Home</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link">Log Out</a>
+            <li className="nav-item1">
+              <a className="nav-link1">Log Out</a>
             </li>
           </ul>
           </div>
@@ -39,7 +53,7 @@ const Navbarafter = () => {
               <a className="nav-link">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Log Out</a>
+              <a className="nav-link" onClick={()=>handleLogout()}>Log Out</a>
             </li>
           </ul>
         </div>
