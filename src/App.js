@@ -30,8 +30,6 @@ function App() {
           <Route path="/" element={<Signinbody />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/home" element={<OrgEvents />} />
-          <Route path="/home/home" element={<Home />} />
-          <Route path="/home/home" element={<Home />} />
           <Route path ="/nominate" element={<ListNominationComponent />} />
         </Routes>
       </div>

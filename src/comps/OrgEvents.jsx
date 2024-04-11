@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from "react";
-import {db} from "../firebase_config";
+import {db, auth } from "../firebase_config";
 import { getUserData } from "./globalFunctions";
-import {collection, getDocs, query, doc, addDoc, setDoc, deleteDoc, orderBy, where} from "firebase/firestore";
+import {collection, getDocs, getDoc, query, doc, addDoc, setDoc, deleteDoc, where} from "firebase/firestore";
 import {useNavigate} from "react-router-dom";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -13,15 +13,24 @@ import Displayname from "../Displayname";
 
 const OrgEvents = () => {
     const userId = getUserData("user")
+
+    if (!userId || !auth) {
+        window.location.replace("/");
+    } else {
+        //console.log(userId)
+    }
+
+    const navigate = useNavigate()
     const [eventRefresh, setEventRefresh] = useState(0);
     const [myevents, setEvents] = useState([]);
     const [ismyAddOverlay, setIsMyAddOverlay] = useState(false)
     const [ismyUpdateOverlay, setismyUpdateOverlay] = useState(false)
-    const navigate = useNavigate()
     const [thisDocId, setthisDocId ] = useState('')
     const [thisEventName, setthisEventName ] = useState('')
     const [thisEventDate, setthisEventDate ] = useState(new Date())
     const [thisEvenFbDate, setthisEventFbName ] = useState(new Date())
+    const [userFname, setUserFname] = useState("Event");
+    const [userLname, setUserLname] = useState("Organiser");
     const handleClickOverlay = (args,props, e) => {
         if(args === "add") {
             setIsMyAddOverlay(!ismyAddOverlay);
@@ -166,6 +175,26 @@ const OrgEvents = () => {
 
     }
 
+    const getUserName = () =>{
+        (async function() {
+            try {
+                const collection_ref =doc(db, 'Users', userId.uid )
+                const getEventsSnapshot = await getDoc(collection_ref);
+                if (getEventsSnapshot.exists()) {
+                    // console.log("Document data:", getEventsSnapshot.data());
+                    setUserFname(getEventsSnapshot.data().fname)
+                    setUserLname(getEventsSnapshot.data().lname)
+                } else {
+                    // docSnap.data() will be undefined in this case
+                    console.log("No such document!");
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        })();
+
+    }
+
     const addEvents = (eventName, eventDate, eventFbDuration ) => {
         try {
             // console.log(eventName, eventDate, eventFbDuration,userId.uid)
@@ -270,10 +299,13 @@ const OrgEvents = () => {
         )
     }
 
+
+    getUserName();
+
     return (
 
         <>
-            <Displayname />
+            <Displayname firstName={userFname} lastName={userLname} />
             <GenerateEvents />
         </>
     );
