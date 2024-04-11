@@ -36,11 +36,11 @@ const Navbarafter = () => {
           <input type="checkbox" id="check"/>
            <div className="side-bar" id="side-bar">
            <ul className="nav_1">
-            <li className="nav-item">
-              <a className="nav-link">Home</a>
+            <li className="nav-item1">
+              <a className="nav-link1">Home</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link">Log Out</a>
+            <li className="nav-item1">
+              <a className="nav-link1">Log Out</a>
             </li>
           </ul>
           </div>

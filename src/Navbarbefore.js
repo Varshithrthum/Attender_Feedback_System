@@ -22,13 +22,13 @@ export const Navbarbefore = () => {
           <input type="checkbox" id="check"/>
            <div className="side-bar" id="side-bar">
            <ul className="nav_1">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
+            <li className="nav-item1">
+              <Link to="/" className="nav-link1">
                 Sign In
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/Signup" className="nav-link">
+            <li className="nav-item1">
+              <Link to="/Signup" className="nav-link1">
                 Sign Up
               </Link>
             </li>
@@ -55,3 +55,4 @@ export const Navbarbefore = () => {
     </div>
   );
 };
+
