@@ -35,8 +35,8 @@ export const Signinbody = () => {
   return (
     <div>
       <section>
-        <div className="container">
-          <div className="image-container">
+        <div className="container2">
+          <div className="image-container2">
             <img src="https://cdn.glitch.global/07931069-62a9-4bd9-a047-47fd7905975d/bench-accounting-C3V88BOoRoM-unsplash.jpg?v=1709198140153" />
             <div className="white-box">
               <p className="text_1">SIGN IN</p>
