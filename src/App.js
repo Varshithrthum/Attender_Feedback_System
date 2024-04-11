@@ -17,6 +17,7 @@ import FeedbackForm from "./pages/FeedbackForm";
 import Question from './comps/addquest'
 
 
+import Nominations from './comps/Nominations'
 function App() {
   return (
     <BrowserRouter>
