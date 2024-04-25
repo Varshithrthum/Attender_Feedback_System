@@ -15,8 +15,6 @@ import ChartComponent from "./Reports/charts";
 import Questioning from "./pages/Questionaire";
 import FeedbackForm from "./pages/FeedbackForm";
 import Question from './comps/addquest'
-
-
 import Nominations from './comps/Nominations'
 import 'react-toastify/dist/ReactToastify.css'; 
 
