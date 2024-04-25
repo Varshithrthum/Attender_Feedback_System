@@ -16,6 +16,8 @@ import Navbarafter from "./Navbarafter";
 import OrgEvents from "./comps/OrgEvents";
 import ListNominationComponent from './comps/listNominations';
 import Nominations from './comps/Nominations'
+import 'react-toastify/dist/ReactToastify.css'; 
+
 function App() {
   return (
     <BrowserRouter>
@@ -32,8 +34,8 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/home" element={<Home />} />
-          <Route path="/home/home" element={<Home />} />
           <Route path ="/nominate"  element={<Nominations />} /> 
+          <Route path="/home/home" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>

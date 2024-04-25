@@ -93,7 +93,7 @@ const OrgEvents = () => {
                             onClick={(e) => handleClickOverlay(id, props, e)}>Edit
                     </button>
                     <button className="button1" key="enom_{id}" data-key={id}
-                            onClick={() => navigate('/nominate', {state: {doc_id: id}})}>Nominate
+                            onClick={() => navigate('/nominate', {state: {eventName: eventName}})}>Nominate
                     </button>
 
 
