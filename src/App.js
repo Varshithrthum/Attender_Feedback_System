@@ -18,6 +18,8 @@ import Question from './comps/addquest'
 
 
 import Nominations from './comps/Nominations'
+import 'react-toastify/dist/ReactToastify.css'; 
+
 function App() {
   return (
     <BrowserRouter>
@@ -44,7 +46,6 @@ function App() {
           <Route path="/feedbackform" element={<FeedbackForm />} />
           <Route path="/landingpage" element={<Landing />} /> 
           <Route path="/addquest" element={<Question />} />
-          <Route path="/home/home" element={<Home />} />
           <Route path="/home/home" element={<Home />} />
         </Routes>
       </div>
