@@ -39,7 +39,7 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/*" element={<Home />} />
-          <Route path="/nominate" element={<ListNominationComponent />} />
+          <Route path="/nominate" element={<Nominations />} />
           <Route path="/report" element={<Report />} />
           <Route path="/chart" element={<ChartComponent />} />
           <Route path="/Questionaire" element={<Questioning />} />
