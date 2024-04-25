@@ -1,23 +1,19 @@
-//Importing necessary libraries and Components
+//Importing Libraries and other Components
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { collection, doc, setDoc, getDoc, where, query, getDocs } from 'firebase/firestore';
 import { firestore } from '../firebase_config';
 import './Feedback.css';
-
+//Function for FeedbackForm
 const FeedbackForm = () => {
-    // React router hooks
     const navigate = useNavigate();
     const location = useLocation();
-    
-    // Extracting query parameters
     const queryParams = new URLSearchParams(location.search);
     const questionsParam = queryParams.get('questions');
     const selectedEventParam = queryParams.get('selectedEvent');
     const questions = questionsParam ? JSON.parse(decodeURIComponent(questionsParam)) : [];
     const selectedEvent = selectedEventParam ? decodeURIComponent(selectedEventParam) : '';
 
-    // States
     const [responses, setResponses] = useState({});
     const [email, setEmail] = useState('');
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -25,7 +21,6 @@ const FeedbackForm = () => {
     const [emailError, setEmailError] = useState('');
     const [isAnonymous, setIsAnonymous] = useState(false); // State for anonymous responses
 
-    // Function to parse Firestore timestamp to Date object
     const parseDateFromFirestoreTimestamp = (timestamp) => {
         const { seconds, nanoseconds } = timestamp;
         const milliseconds = seconds * 1000 + nanoseconds / 1000000;
@@ -63,15 +58,13 @@ const FeedbackForm = () => {
         localStorage.setItem('responses', JSON.stringify(responses));
     }, [responses]);
 
-    // Function to handle changes in responses
     const handleChange = (question, value) => {
         setResponses(prevState => ({
             ...prevState,
             [question]: value
         }));
     };
-
-    // Function to handle form submission
+//Function to Submit the Form
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -122,12 +115,16 @@ const FeedbackForm = () => {
     // Function to toggle anonymous responses
     const toggleAnonymous = () => {
         setIsAnonymous(prevState => !prevState);
-        setEmail(''); // Clear email field when adding anonymous
+        setEmail(''); // Clear email field when toggling anonymous
     };
-
+//check for the Event Expiration 
     return (
         <div className="container">
-            <h1 className="header"> Feedback Form for {selectedEvent}</h1>
+            {expirationDate && new Date() <= expirationDate ? (
+                <h1 className="header">Feedback Form for {selectedEvent}</h1>
+            ) : (
+                <h1 className="header">Event Expired: {selectedEvent}</h1>
+            )}
             {expirationDate && new Date() <= expirationDate && (
                 <>
                     <div className="anonymous-toggle">

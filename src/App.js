@@ -14,6 +14,7 @@ import Report from "./Reports/Report";
 import ChartComponent from "./Reports/charts";
 import Questioning from "./pages/Questionaire";
 import FeedbackForm from "./pages/FeedbackForm";
+import Question from './comps/addquest'
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="/Questionaire" element={<Questioning />} />
           <Route path="/feedbackform" element={<FeedbackForm />} />
           <Route path="/landingpage" element={<Landing />} /> 
+          <Route path="/addquest" element={<Question />} />
         </Routes>
       </div>
     </BrowserRouter>

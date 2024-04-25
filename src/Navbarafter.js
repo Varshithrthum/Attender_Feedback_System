@@ -42,8 +42,17 @@ const Navbarafter = () => {
                 <Link to="/home" className="nav-link">Home</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" onClick={() => handleLogout()}>Log Out</a>
-              </li>
+              <Link to="/Questionaire" className="nav-link">Select Questionaire</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Report" className="nav-link">Reports</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Chart" className="nav-link">Charts</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/logout" className="nav-link" onClick={() => handleLogout()}>Log Out</Link>
+            </li>
             </ul>
           </div>
 
@@ -54,6 +63,9 @@ const Navbarafter = () => {
           <ul className={`nav ${sidebarOpen ? 'hidden' : ''}`}>
             <li className="nav-item">
               <Link to="/home" className="nav-link">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/addquest" className="nav-link">Add questions</Link>
             </li>
             <li className="nav-item">
               <Link to="/Questionaire" className="nav-link">Select Questionaire</Link>
