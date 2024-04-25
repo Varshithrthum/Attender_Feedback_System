@@ -15,7 +15,8 @@ import ChartComponent from "./Reports/charts";
 import Questioning from "./pages/Questionaire";
 import FeedbackForm from "./pages/FeedbackForm";
 import Question from './comps/addquest'
-
+import Nominations from './comps/Nominations'
+import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
   return (
@@ -36,14 +37,14 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/*" element={<Home />} />
-          <Route path="/nominate" element={<ListNominationComponent />} />
-          
+          <Route path="/nominate" element={<Nominations />} />
           <Route path="/report" element={<Report />} />
           <Route path="/chart" element={<ChartComponent />} />
           <Route path="/Questionaire" element={<Questioning />} />
           <Route path="/feedbackform" element={<FeedbackForm />} />
           <Route path="/landingpage" element={<Landing />} /> 
           <Route path="/addquest" element={<Question />} />
+          <Route path="/home/home" element={<Home />} />
         </Routes>
       </div>
     </BrowserRouter>

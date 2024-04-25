@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 // import EmployeeService from '../services/EmployeeService'
+import Modal from 'react-bootstrap/Modal';
 
 class ListNominationComponent extends Component {
     constructor(props) {
@@ -146,6 +147,9 @@ class ListNominationComponent extends Component {
             </div>
         )
     }
+    
 }
+
+
 
 export default ListNominationComponent
