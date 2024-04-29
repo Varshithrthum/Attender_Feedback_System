@@ -1,4 +1,4 @@
-//Importing Libraries and other Components
+// Importing Libraries and other Components
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs, getDoc, doc, setDoc } from 'firebase/firestore';
 import { firestore } from '../firebase_config';
@@ -17,6 +17,16 @@ const Question = () => {
     const [email, setEmail] = useState('');
     const [submissionSuccess, setSubmissionSuccess] = useState(false);
     const [showModal, setShowModal] = useState(false);
+
+    // Function to save form URL to Firestore
+    const saveFormUrl = async (eventName, url) => {
+        try {
+            const formsRef = collection(firestore, 'Forms');
+            await setDoc(doc(formsRef, eventName), { Link: url });
+        } catch (error) {
+            console.error('Error saving form URL:', error);
+        }
+    };
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -118,23 +128,30 @@ const Question = () => {
     const navigate = useNavigate(); // Use useHistory
 
     const navigateToFeedbackForm = () => {
-        const formUrl = '/feedbackform'; // URL of the feedback form route
-        const queryString = `?questions=${JSON.stringify(questions)}&selectedEvent=${selectedEvent}`;
-        const newTabUrl = formUrl + queryString;
-        window.open(newTabUrl, '_blank'); // Open in a new tab
-
+        // Base URL
+        const baseUrl = 'http://localhost:3000/';
+    
+        // URL of the feedback form route
+        const formUrl = 'feedbackform';
+    
+        // Encode the questions array and selectedEvent parameter
+        const encodedQuestions = encodeURIComponent(JSON.stringify(questions));
+        const encodedSelectedEvent = encodeURIComponent(selectedEvent);
+    
+        // Construct the query string with encoded parameters
+        const queryString = `?questions=${encodedQuestions}&selectedEvent=${encodedSelectedEvent}`;
+    
+        // Combine the base URL, form URL, and query string
+        const newTabUrl = baseUrl + formUrl + queryString;
+    
+        // Open in a new tab
+        window.open(newTabUrl, '_blank');
+    
         // Save the generated URL in the Forms collection
         saveFormUrl(selectedEvent, newTabUrl);
     };
-
-    const saveFormUrl = async (eventName, url) => {
-        try {
-            const formsRef = collection(firestore, 'Forms');
-            await setDoc(doc(formsRef, eventName), { Link: url });
-        } catch (error) {
-            console.error('Error saving form URL:', error);
-        }
-    };
+    
+    
 
     const handleCloseModal = () => {
         setShowModal(false);
