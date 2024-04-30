@@ -92,6 +92,7 @@ const Nominations = () => {
     // method to send e-mail
     const mailEvent = async (e, to, html) => {
         e.preventDefault();
+        // get the event name from event navigate object
         const eventName = location['state']['eventName'];
         const docRef = doc(db, "Forms", eventName);
         const docSnap = await getDoc(docRef);
@@ -104,6 +105,7 @@ const Nominations = () => {
         }
         const namenew = JSON.stringify(name);
         try {
+            //Sending the email code
             addDoc(collection(db, 'Mail'), {
                 to: email,
                 message: {
@@ -155,7 +157,7 @@ const Nominations = () => {
                             <h1>Help Us Improve!</h1>
                             <p>Dear ,${namenew},</p>
                             <p>We are always striving to improve your experience and would love your feedback! Please take a few minutes to complete our survey. Your responses are invaluable to us.</p>
-                            <a href="https://www.localhost3000.com${link}" class="button">Take the Survey</a>
+                            <a href=${link} class="button">Take the Survey</a>
                             <p>Thank you for your time and your trust in us. Your feedback helps us improve our service to you!</p>
                             <p class="footer">If you have any questions, feel free to contact us at any time.</p>
                         </div>
