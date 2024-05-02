@@ -39,6 +39,13 @@
 }
 
 .button_11 {
+  background-image: url("../public/plus.png") ;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  /*
   align-items: center;
   background-color: white;
   border-color: #073763;
@@ -49,6 +56,8 @@
   color: #073763;
   text-align: center;
   border-radius: 50%;
+
+   */
 }
 
 .text_11 {
@@ -56,6 +65,7 @@
   font-family: Raleway, sans-serif;
   font-size: 25px;
   color: #052645;
+  margin-bottom: 0px;
 }
 
 .text_21 {
@@ -63,6 +73,7 @@
   font-family: Raleway, sans-serif;
   font-size: 20px;
   color: black;
+  margin-bottom: 0px;
 }
 
 .text_31 {

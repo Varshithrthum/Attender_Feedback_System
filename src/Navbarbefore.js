@@ -21,38 +21,48 @@ export const Navbarbefore = () => {
           </div>
           <input type="checkbox" id="check"/>
            <div className="side-bar" id="side-bar">
-           <ul className="nav_1">
-            <li className="nav-item1">
-              <Link to="/" className="nav-link1">
-                Sign In
-              </Link>
-            </li>
-            <li className="nav-item1">
-              <Link to="/Signup" className="nav-link1">
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-          </div>
-          <label for="check" class="barras">
-              <FaBars />
-          </label>
+               <ul className="nav_1">
+                   <li className="nav-item">
+                       <Link to="/" className="nav-link">
+                           Home
+                       </Link>
+                   </li>
+                   <li className="nav-item1">
+                       <Link to="/Signin" className="nav-link1">
+                           Sign In
+                       </Link>
+                   </li>
+                   <li className="nav-item1">
+                       <Link to="/Signup" className="nav-link1">
+                           Sign Up
+                       </Link>
+                   </li>
+               </ul>
+           </div>
+            <label for="check" class="barras">
+                <FaBars/>
+            </label>
 
-          <ul className="nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
-                Sign In
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/Signup" className="nav-link">
-                Sign Up
-              </Link>
-            </li>
-          </ul>
+            <ul className="nav">
+                <li className="nav-item">
+                    <Link to="/" className="nav-link">
+                        Home
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/Signin" className="nav-link">
+                        Sign In
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/Signup" className="nav-link">
+                        Sign Up
+                    </Link>
+                </li>
+            </ul>
         </div>
       </nav>
-    </div>
+</div>
   );
 };
 

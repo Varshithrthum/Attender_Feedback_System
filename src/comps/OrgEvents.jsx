@@ -292,7 +292,7 @@ const OrgEvents = () => {
                     }
                 </div>
                 <br/><br/><br/>
-                <button className="button_11" key="add_{id}" onClick={(e) => handleClickOverlay("add", e)}>+
+                <button className="button_11" key="add_{id}" onClick={(e) => handleClickOverlay("add", e)}>
                 </button>
 
             </div>

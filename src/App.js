@@ -16,6 +16,7 @@ import Questioning from "./pages/Questionaire";
 import FeedbackForm from "./pages/FeedbackForm";
 import Question from './comps/addquest'
 import Nominations from './comps/Nominations'
+import SysHome from './SystemHomepage'
 import 'react-toastify/dist/ReactToastify.css'; 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <header>
           <Routes>
             <Route path="/" element={<Navbarbefore />} />
+            <Route path="/Signin" element={<Navbarbefore />} />
             <Route path="/Signup" element={<Navbarbefore />} />
             <Route path="/home/*" element={<Navbarafter />} />
             <Route path="/question/*" element={<Navbarafter />} />
@@ -33,7 +35,8 @@ function App() {
           </Routes>
         </header>
         <Routes>
-          <Route path="/" element={<Signinbody />} />
+          <Route path="/" element={<SysHome /> } />
+          <Route path="/Signin" element={<Signinbody />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/home" element={<OrgEvents />} />
           <Route path="/home/*" element={<Home />} />
