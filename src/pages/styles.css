@@ -1,0 +1,165 @@
+/* Main container styles */
+.container{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Select container styles */
+.select-container {
+    margin-bottom: 20px;
+}
+
+/* Loading and error message styles */
+.loading, .error {
+    text-align: center;
+    color: #FF0000;
+}
+
+/* Email input styles */
+.email-input {
+    margin-bottom: 20px;
+}
+
+.email-input .input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Question item styles */
+.question-item {
+    margin-bottom: 20px;
+}
+
+.questionText {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Radio options styles */
+.radioOptions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radioLabel {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.radioLabel input {
+    margin-right: 5px;
+}
+
+/* Submit button styles */
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #073763;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #05294b;
+}
+
+/* Create form button styles */
+.createFormButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #073763;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.createFormButton:hover {
+    background-color: #05294b;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .header {
+        font-size: 20px;
+    }
+    .submitButton, .createFormButton {
+        width: auto;
+    }
+}
+
+/* Additional media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+}

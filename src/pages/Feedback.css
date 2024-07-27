@@ -1,0 +1,80 @@
+.container {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px;
+    text-align: center;
+    top: 600px;
+}
+
+.header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.questions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.question-item {
+    margin-bottom: 20px;
+}
+
+.questionText {
+    font-weight: bold;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.option-label {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.radioInput {
+    margin-right: 5px;
+}
+
+.emailInput {
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #073763;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.submitButton:hover {
+    background-color: #061f3e;
+}
+
+.success-message {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #4caf50;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}

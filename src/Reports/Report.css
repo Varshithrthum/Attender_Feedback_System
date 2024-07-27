@@ -1,0 +1,75 @@
+/* Styles for the container of the report */
+.report-container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styles for the table used in the report */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+/* Styles for table header cells and data cells */
+.report-table th, .report-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Styles for table header cells */
+.report-table th {
+  background-color: #f2f2f2;
+}
+
+/* Styles for even rows in the table */
+.report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Styles for table rows on hover */
+.report-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Styles for pagination container */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Styles for pagination buttons */
+.pagination button {
+  background-color: #073763;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for pagination buttons on hover */
+.pagination button:hover {
+  background-color: #073763;
+}
+
+/* Styles for a button used to fetch data */
+.get-data-button {
+  background-color: #073763;
+  border: none;
+  color: white;
+  padding: 1px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styles for the fetch data button on hover */
+.get-data-button:hover {
+  background-color: #073763;
+}

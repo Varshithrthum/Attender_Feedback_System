@@ -1,0 +1,19 @@
+.name-container {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(7, 55, 99, 0.15);
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-text {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  color: #052645;
+  font-size: 30px;
+  position: relative;
+}

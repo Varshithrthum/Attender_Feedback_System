@@ -1,0 +1,209 @@
+.container_11 {
+  width: 97%;
+  height: 30%;
+  position: relative;
+  border: none;
+  background-color: rgba(7, 55, 99, 0.2);
+  margin: 20px;
+  display: flex;
+}
+
+.text-container1 {
+  text-align: left;
+  width: 70%;
+}
+
+.button-container1 {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 55px;
+}
+
+.icon-container1 {
+  text-align: center;
+}
+
+.button1 {
+  background-color: #073763;
+  display: inline-block;
+  width: 90px;
+  height: 50px;
+  font-size: 15px;
+  font-family: Raleway, sans-serif;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.button_11 {
+  background-image: url("../public/plus.png") ;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  /*
+  align-items: center;
+  background-color: white;
+  border-color: #073763;
+  width: 50px;
+  height: 50px;
+  font-size: 45px;
+  font-family: Raleway, sans-serif;
+  color: #073763;
+  text-align: center;
+  border-radius: 50%;
+
+   */
+}
+
+.text_11 {
+  padding-left: 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 25px;
+  color: #052645;
+  margin-bottom: 0px;
+}
+
+.text_21 {
+  padding-left: 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 0px;
+}
+
+.text_31 {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+/*raymond code*/
+
+div.orgevents {
+  display: inherit;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+div.orgevents h1{
+  display: inline;
+  width: 100%;
+}
+
+div.event {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 110px;
+  background-color: rgba(7, 55, 99, 0.15);
+  border-radius: 10px;
+  box-shadow: gray -2px 5px;
+  margin-top: 10px;
+}
+div.eventName {
+  margin-left: 50px;
+  float: left;
+
+}
+div.eventLinks {
+  margin-left: auto;
+  margin-right: 50px;
+  float:right;
+}
+div.event a {
+  float: right;
+}
+
+.overlay-background {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 9;
+  opacity: 75%;
+}
+
+.overlay-cont {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  padding: 30px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.overlay-ctrl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-ctrl-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay-ctrl-cont {
+  display: flex;
+}
+
+.overlay-close {
+  border: none;
+  background-color: transparent;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.overlay-close:after {
+  display: inline-block;
+  content: "\00d7";
+}
+
+.event-cont {
+  display: flow-root;
+}
+.event-label-row {
+  display: flex;
+  margin-bottom: 5px;
+}
+.event-label-name {
+  width: 200px;
+  float: left;
+}
+
+.event-label-input {
+  width: 200px;
+  float: left;
+}
+
+.event-cont-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px 10px 0px;
+
+}
+
+.event-cont-button button {
+  padding: 5px 10px;
+  border-width: thin;
+  border-radius: 15px;
+
+}
