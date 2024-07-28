@@ -8,14 +8,15 @@ require("firebase/auth");
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAcBTrA_J9B9B6mBbJ4NR8ET7QiuuhSG3M",
-  authDomain: "attender-feedback-80475.firebaseapp.com",
-  projectId: "attender-feedback-80475",
-  storageBucket: "attender-feedback-80475.appspot.com",
-  messagingSenderId: "625416719120",
-  appId: "1:625416719120:web:cf14e28962fae35a5f3395",
-  measurementId: "G-8Z6PN9TKD6",
-};
+  apiKey: "REDACTED_API_KEY",  // removed sensitive info
+  authDomain: "REDACTED_AUTH_DOMAIN",  // removed sensitive info
+  projectId: "REDACTED_PROJECT_ID",  // removed sensitive info
+  storageBucket: "REDACTED_STORAGE_BUCKET",  // removed sensitive info
+  messagingSenderId: "REDACTED_MESSAGING_SENDER_ID",  // removed sensitive info
+  appId: "REDACTED_APP_ID",  // removed sensitive info
+  measurementId: "REDACTED_MEASUREMENT_ID",  // removed sensitive info
+}
+
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
